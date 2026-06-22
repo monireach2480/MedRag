@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 export const maxDuration = 60
 export const dynamic = 'force-dynamic'
 
-const BACKEND = 'https://medicalrag.duckdns.org'
+const BACKEND = process.env.BACKEND_URL;
 
 async function handler(req: NextRequest) {
   const url = new URL(req.url)
